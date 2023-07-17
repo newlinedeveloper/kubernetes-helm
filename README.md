@@ -4,10 +4,55 @@ Developing and deploying helm charts on kubernetes
 #### Prerequistics
 
 ```
-https://helm.sh/docs/intro/install/
+- Docker setup: https://docs.docker.com/engine/install/
+- Kubectl installation: https://kubernetes.io/docs/tasks/tools/
+- Minikube setup : https://minikube.sigs.k8s.io/docs/start/
+- helm setup  - https://helm.sh/docs/intro/install/
+
+docker version
+
+kubectl version
+
+minikube version
 
 helm version
+
+minikube start
 ```
+
+#### Artifacts Hub
+
+```
+https://artifacthub.io/packages/search
+
+```
+
+
+#### Basics commands
+
+```
+helm repo add bitnami https://charts.bitnami.com/bitnami
+
+helm search repo bitnami
+
+helm repo update 
+
+helm install bitnami/mysql --generate-name
+
+helm show chart bitnami/mysql
+
+helm show all bitnami/mysql
+
+helm list
+
+helm uninstall mysql-1612624192
+
+helm status mysql-1612624192
+
+helm rollback mysql-1612624192 1
+
+```
+
 
 
 #### Helm Commands
