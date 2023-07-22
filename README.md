@@ -42,12 +42,6 @@ helm uninstall mysql-1612624192
 
 helm status mysql-1612624192
 
-helm rollback mysql-1612624192 1
-
-
-
-helm install helm-dev ./helm-chart --values ./helm-chart/env/dev/values.yml
-
 ```
 
 
