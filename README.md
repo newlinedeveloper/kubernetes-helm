@@ -20,15 +20,8 @@ helm version
 minikube start
 ```
 
-#### Artifacts Hub
 
-```
-https://artifacthub.io/packages/search
-
-```
-
-
-#### Basics commands
+#### Helm Get started (Basics commands)
 
 ```
 helm repo add bitnami https://charts.bitnami.com/bitnami
@@ -56,6 +49,37 @@ helm rollback mysql-1612624192 1
 helm install helm-dev ./helm-chart --values ./helm-chart/env/dev/values.yml
 
 ```
+
+
+
+#### Artifacts Hub
+
+```
+https://artifacthub.io/packages/search
+
+```
+
+
+#### Multi Env deployment
+
+```
+# Dev env 
+helm install helm-dev ./helm-chart --values ./helm-chart/env/dev/values.yml
+
+helm uninstall helm-dev
+
+# staging env
+helm install helm-stage ./helm-chart --values ./helm-chart/env/stage/values.yml
+
+helm uninstall helm-stage
+
+# prod env
+helm install helm-prod ./helm-chart --values ./helm-chart/env/prod/values.yml
+
+helm uninstall helm-prod
+
+```
+
 
 
 
